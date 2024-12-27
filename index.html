@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header>
@@ -19,37 +20,38 @@
         </nav>
     </header>
 
-    <section id="hero">
+
+    <section id="hero" data-aos="fade-down" data-aos-duration="1000">
         <h2>Desarrollador de Software</h2>
         <p>Proactive professional with a solid foundation in technology and a constant commitment to learning and development. I seek opportunities to apply my skills and knowledge in challenging environments that drive my professional growth and allow me to contribute to the organization's success. I am characterized by my ability to identify opportunities and find innovative solutions</p>
-        <button>Descargar CV</button>
+        <button data-aos="zoom-in" data-aos-delay="500">Descargar CV</button>
     </section>
 
-    <section id="experiencia">
+    <section id="experiencia" data-aos="fade-up">
         <h2>Experiencia Laboral</h2>
-        <div class="experiencia-item">
+        <div class="experiencia-item" data-aos="slide-up" data-aos-delay="200">
             <h3>Puesto 1</h3>
             <p>Empresa - Fecha</p>
             <p>Descripción de las responsabilidades.</p>
         </div>
-        </section>
+    </section>
 
-    <section id="proyectos">
+    <section id="proyectos" data-aos="fade-right">
         <h2>Proyectos</h2>
-        <div class="proyecto-item">
+        <div class="proyecto-item" data-aos="flip-left" data-aos-delay="300">
             <h3>Proyecto 1</h3>
             <p>Breve descripción del proyecto.</p>
             <a href="#">Ver Proyecto</a>
         </div>
     </section>
 
-    <section id="contacto">
+    <section id="contacto" data-aos="zoom-in-up">
         <h2>Contacto</h2>
         <form>
-            <input type="text" placeholder="Tu Nombre">
-            <input type="email" placeholder="Tu Correo">
-            <textarea placeholder="Tu Mensaje"></textarea>
-            <button type="submit">Enviar Mensaje</button>
+            <input type="text" placeholder="Tu Nombre" data-aos="fade-in" data-aos-delay="100">
+            <input type="email" placeholder="Tu Correo" data-aos="fade-in" data-aos-delay="200">
+            <textarea placeholder="Tu Mensaje" data-aos="fade-in" data-aos-delay="300"></textarea>
+            <button type="submit" data-aos="pulse">Enviar Mensaje</button>
         </form>
     </section>
 
@@ -57,5 +59,30 @@
         <p>&copy; 2025 Alfonso Darchez</p>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    // Global settings:
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: 'DOMContentLoaded', // name of the event on window that AOS should initialize on
+    initClassName: 'aos-init', // class applied after initialization
+    animatedClassName: 'aos-animate', // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' observer which is used to automatically init elements on content loaded after the page is loaded
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+    
+
+    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+    offset: 120, // offset (in px) from the original trigger point
+    delay: 0, // values from 0 to 3000, with step 50ms
+    duration: 400, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+  });
+</script>
 </body>
 </html>
