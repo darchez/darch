@@ -1,0 +1,58 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Un gris claro de fondo */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 960px; /* Ancho máximo para el contenido */
+    background-color: white; /* Fondo blanco para las secciones */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+#hero{
+    text-align: center;
+}
+
+/* Estilos para el resto de secciones */
+.experiencia-item, .proyecto-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed; /* Para que el footer se quede abajo */
+    bottom: 0;
+    width: 100%;
+}
+/* Media Query para responsive design */
+@media (max-width: 768px) {
+    nav a {
+        display: block; /* Los enlaces de navegación se apilan verticalmente en pantallas pequeñas */
+        margin: 0.5rem 0;
+    }
+}
